@@ -27,4 +27,7 @@
             }
         }
     }
+    @include m.respond-to('tablet') {
+        display: none;
+    }
 }
