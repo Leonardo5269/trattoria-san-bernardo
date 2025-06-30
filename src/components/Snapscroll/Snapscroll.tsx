@@ -1,28 +1,52 @@
-import React from 'react';
+"use client";
+
+import React, { useRef, useEffect, useState } from 'react';
 import styles from './Snapscroll.module.scss';
 import { snapscrollElements } from '@/features/snapscrollElements';
 import Image from 'next/image';
-import FadeIn from '../Animation/FadeIn';
-
-// function SectionCounter(): JSX.Element {
-//   return (
-//     <div className={styles['section-counter']}>
-//       <ul>
-//         {snapscrollElements.map((_, index) => (
-//           <li key={index}><Circle Icon={`${index + 1}`} classname={styles.circle} /></li>
-//         ))}
-//       </ul>
-//     </div>
-//   )
-// }
+import SectionCounter from './SectionCounter/SectionCounter';
 
 export default function Snapscroll() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = Number(entry.target.getAttribute('data-index'));
+            setCurrentIndex(idx);
+          }
+        });
+      },
+      {
+        root: null,
+      }
+    );
+
+    const refs = sectionRefs.current;
+
+    refs.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      refs.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
+
   return (
     <div className={styles['snapscroll-container']}>
+      <SectionCounter currentIndex={currentIndex}/>
       <div className={styles.snapscroll}>
         {snapscrollElements.map((el, index) => (
-          <FadeIn key={index} direction='up' delay={0.3}>
-            <div className={styles.section}>
+            <div
+              className={styles.section}
+              key={index}
+            >
               <div className={styles['imgs-grid']}>
                 <div className={styles['img-cell']}>
                   <Image
@@ -53,11 +77,15 @@ export default function Snapscroll() {
                 </div>
               </div>
               <div className={styles['text-content']}>
-                <h3>{el.title}</h3>
-                <p className='medium mt-xxl'>{el.description}</p>
+                <h3
+                  ref={el => {(sectionRefs.current[index] = el)}}
+                  data-index={index}
+                >
+                    {el.title}
+                </h3>
+                <p className='medium mt-xl'>{el.description}</p>
               </div>
             </div>
-          </FadeIn>
         ))}
       </div>
     </div>

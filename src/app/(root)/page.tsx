@@ -4,6 +4,7 @@ import React from 'react';
 import Snapscroll from '@/components/Snapscroll/Snapscroll';
 import ReviewsSection from './ReviewsSection/ReviewsSection';
 import Chiusura from '@/ui/Chiusura/Chiusura';
+import FadeIn from '@/components/Animation/FadeIn';
 
 export default function page() {
   return (
@@ -13,7 +14,9 @@ export default function page() {
         <p className="large mt-regular">Dimentica il solito pranzo: qui ogni piatto è un viaggio tra gusto, tradizione e pura emozione</p>
         <Link href='/prenota' className='btn-1l mt-xxl'>Prenota ora</Link>
       </Hero>
-      <Snapscroll />
+      <FadeIn delay={0.4}>
+        <Snapscroll />
+      </FadeIn>
       <ReviewsSection />
       <Chiusura />
     </>

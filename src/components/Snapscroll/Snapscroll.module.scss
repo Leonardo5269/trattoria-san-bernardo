@@ -6,18 +6,19 @@
     .snapscroll {
         scroll-snap-type: y mandatory;
         overflow-y: auto;
-        height: 100dvh; // or 100dvh for full viewport height
-        &::-webkit-scrollbar { // Chrome, Safari
+        height: 100vh; 
+        &::-webkit-scrollbar { 
             display: none;
         }
         .section {
             padding-inline: var(--S-MX);
             scroll-snap-align: start;
+            scroll-snap-stop: always;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: v.$xxl;
-            min-height: 100dvh;
+            min-height: 100vh;
 
             .imgs-grid {
                 display: grid;
@@ -57,7 +58,7 @@
             height: auto;
             .section {
                 scroll-snap-align: none;
-
+                gap: v.$l;
                 min-height: 0;
                 flex-direction: column;
                 justify-content: center;
@@ -68,18 +69,5 @@
                 }
             }
         }
-    }
-}
-
-.section-counter {
-    // Lascio a parte 
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 100%;
-    .circle {
-        width: 2rem;
-        background-color: v.$bg-2;
-        color: v.$ui-small;
     }
 }

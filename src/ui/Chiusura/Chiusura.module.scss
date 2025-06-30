@@ -4,7 +4,7 @@
 .chiusura {
   padding-block: v.$xxxl;
   display: flex;
-  gap: v.$xxxl;
+  gap: v.$xxl;
   align-items: center;
   justify-content: space-between;
 
@@ -23,7 +23,6 @@
       position: relative;
       width: 100%;
       aspect-ratio: 1 / 1;
-      min-width: 220px;
       max-width: 340px;
       border-radius: 16px;
 
