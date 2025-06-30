@@ -1,0 +1,30 @@
+@use '@/sass/variables' as v;
+@use '@/sass/mixins' as m;
+
+.section-counter {
+    // Lascio a parte 
+    position: absolute;
+    align-self: center;
+    left: calc(var(--S-MX) / 2);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    ul {
+        list-style: none;
+        li {
+            margin-bottom: v.$xxs;
+            .circle {
+                width: 2rem;
+                color: v.$ui-small;
+                cursor: default;
+                transition: .2s;
+
+                // Animation
+                &.active {
+                    color: v.$p-color;
+                    transform: scale(130%);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

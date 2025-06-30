@@ -25,10 +25,10 @@ body {
 }
 
 h1 {
-    $h1-size: 112px;
+    $h1-size: 128px;
     color: v.$title;
     font-size: clamp(
-        3.5rem, 
+        3.8rem, 
         13vw, 
         $h1-size
     );
@@ -42,10 +42,10 @@ h1 {
 }
 
 h2 {
-    $h2-size: 72px;
+    $h2-size: 80px;
     color: v.$title-2;
     font-size: clamp(
-        2.7rem, 
+        3.2rem, 
         12vw, 
         $h2-size
     );
