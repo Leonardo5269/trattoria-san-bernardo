@@ -83,7 +83,7 @@ export default function Snapscroll() {
                 >
                     {el.title}
                 </h3>
-                <p className='medium mt-xl'>{el.description}</p>
+                <p className='medium mt-l'>{el.description}</p>
               </div>
             </div>
         ))}
