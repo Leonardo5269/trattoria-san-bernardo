@@ -4,7 +4,7 @@ import styles from './page.module.scss';
 export default function page() {
   return (
     <div className={`s-mx ${styles['privacy-e-cookie']}`}>
-      <h3 className="mt-xl">Privacy Policy e Note Legali</h3>
+      <h3 className="mt-xl">Privacy policy e note legali</h3>
 
       <h4 className="mt-xl">1. Titolare del Trattamento</h4>
       <p className="mt-xxs">
