@@ -1,0 +1,11 @@
+@use '@/sass/variables' as v;
+
+.privacy-e-cookie {
+    margin-block: v.$xxxl;
+    ul {
+        list-style-position: inside;
+        li {
+            line-height: 1.55;
+        }
+    }
+}
