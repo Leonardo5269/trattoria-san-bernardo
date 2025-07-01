@@ -21,7 +21,7 @@ export default function page() {
         </div>
       </div>
       <div className={`${styles["text"]}`}>
-        <h2>Orari Di Apertura</h2>
+        <h2>Orari di apertura</h2>
         <p className="mt-l large">
           Vieni a trovarci nei nostri orari di apertura: ti aspettiamo per pranzo, cena o semplicemente per goderti l’atmosfera unica davanti all’Abbazia.
         </p>

@@ -29,6 +29,8 @@
 .mt-xxl { margin-top: v.$xxl; }
 .mt-xxxl { margin-top: v.$xxxl; }
 
+.ml-xxl { margin-left: v.$xl; }
+
 // Syling
 button.btn-1s,
 a.btn-1s {
@@ -45,10 +47,6 @@ a.btn-1s {
     &:hover {
         background-color: v.$primary-hover;
     }
-    &.loading {
-        cursor: not-allowed;
-        opacity: .2;
-    }
 }
 button.btn-1l,
 a.btn-1l {
@@ -64,10 +62,6 @@ a.btn-1l {
     background-color: v.$primary;
     &:hover {
         background-color: v.$primary-hover;
-    }
-    &.loading {
-        cursor: not-allowed;
-        opacity: .2;
     }
 }
 button.btn-1li,
@@ -92,8 +86,23 @@ a.btn-1li {
     &:hover {
         background-color: v.$primary-hover;
     }
-    &.loading {
-        cursor: not-allowed;
-        opacity: .2;
+}
+button.btn-2l,
+a.btn-2l {
+    $border-width: 2px;
+    transition: .2s;
+    display: inline-block;
+    font: v.$regular var(--font-montserrat), sans-serif;
+    padding: calc(1.125em - $border-width) calc(2em - $border-width);
+    border-radius: v.$xs;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 500;
+    border: $border-width solid v.$bg-1a;
+    &:hover {
+        color: v.$primary-hover;
+        border: 3px solid v.$primary-hover;
+
     }
 }

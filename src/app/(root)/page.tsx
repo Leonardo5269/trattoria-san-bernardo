@@ -12,7 +12,10 @@ export default function page() {
       <Hero>
         <h1 className='dark'>Mangia Bene e Rilassati</h1>
         <p className="large mt-regular">Dimentica il solito pranzo: qui ogni piatto è un viaggio tra gusto, tradizione e pura emozione</p>
-        <Link href='/prenota' className='btn-1l mt-xxl'>Prenota ora</Link>
+        <div className="mt-xxl">
+          <Link href='/prenota' className='btn-1l'>Prenota ora</Link>
+          <Link href='/menu.pdf' className='btn-2l ml-xxl' rel='noopener' target='_blank'>Menù</Link>
+        </div>
       </Hero>
       <FadeIn delay={0.4}>
         <Snapscroll />

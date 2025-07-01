@@ -16,7 +16,7 @@ export default function ReviewsSection() {
       <FadeIn direction='up' delay={0.3}>
         <div className={styles['content']}>
           <div className={styles.text}>
-            <h3>Cosa Dicono di Noi</h3>
+            <h3>Cosa dicono di noi</h3>
             <p className="medium mt-regular"><FaStar className={styles.icon} /> 4.8 / 5 su oltre 900 recensioni tra <a href={socials.facebook} className="simple-link-2">Facebook</a> e <a href={socials.googleMaps} className="simple-link-2">Google Maps</a></p>
           </div>
           <div className={styles.logos}>

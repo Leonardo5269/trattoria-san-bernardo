@@ -13,7 +13,7 @@ const snapscrollElements: SnapscrollElementsType[] = [
       "/location/interno-9.jpg",
       "/location/esterno-8.jpg"
     ],
-    title: "Silenzio, Natura e Mura Antiche",
+    title: "Silenzio, natura e mura antiche",
     description: (
       <>
         Siamo a <strong>Morimondo</strong>, nel cuore del borgo. <br />
@@ -30,7 +30,7 @@ const snapscrollElements: SnapscrollElementsType[] = [
       "/menu/vino-1.jpg",
       "/menu/primo-2.jpg"
     ],
-    title: "Ogni Piatto Ha Il Suo Complice",
+    title: "Ogni piatto ha il suo complice",
     description: (
       <>
         La fusione tra i piatti della tradizione e la nostra <strong>scelta di vini</strong> è l’ingrediente segreto per un’esperienza suggestiva.<br />
@@ -44,7 +44,7 @@ const snapscrollElements: SnapscrollElementsType[] = [
       "/menu/primo-6.jpg",
       "/menu/secondo-2.jpg"
     ],
-    title: "Non È Solo Un Pasto: È Un Rituale",
+    title: "Non è solo un pasto: è un rituale",
     description: (
       <>
         Ti lascerai trasportare da un flusso di emozioni: dalla scelta accurata delle <strong>materie prime</strong>,
@@ -59,7 +59,7 @@ const snapscrollElements: SnapscrollElementsType[] = [
       "/menu/secondo-5.jpg",
       "/menu/secondo-6.jpg"
     ],
-    title: "La Carne, La Nostra Specialità",
+    title: "La carne, la nostra specialità",
     description: (
       <>
         Tagli generosi, scelti con cura minuziosa. Cotti sulla <strong>griglia a vista</strong>, dove il profumo ti avvolge e puoi vedere la passione in ogni gesto.
@@ -72,7 +72,7 @@ const snapscrollElements: SnapscrollElementsType[] = [
       "/menu/dolce-3.jpg",
       "/menu/dolce-1.jpg"
     ],
-    title: "Il Finale Perfetto Non Esiste",
+    title: "Il finale perfetto non esiste",
     description: (
       <>
         Il <strong>dessert</strong> è la chiave per sigillare un’esperienza indimenticabile. L’ultimo bacio prima dei saluti.

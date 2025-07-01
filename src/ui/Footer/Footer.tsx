@@ -51,10 +51,10 @@ export default function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href='/menu.pdf'>Menù</Link>
+              <Link href='/menu.pdf' rel='noopener' target='_blank'>Menù</Link>
             </li>
             <li>
-              <Link href="/galleria">Galleria</Link>
+              <Link href="/galleria" scroll={true}>Galleria</Link>
             </li>
             <li>
               <Link href="/orari">Orari</Link>

@@ -51,7 +51,7 @@ export default function Navbar() {
         <ul className={`link-pages ${isMenuOpened ? 'show' : 'hide'}`}>
           <li onClick={closeMenu}><Link href='/'>Home</Link></li>
           <li onClick={closeMenu}><Link href='/menu.pdf' rel='noopener' target='_blank'>Menù</Link></li>
-          <li onClick={closeMenu}><Link href='/galleria'>Galleria</Link></li>
+          <li onClick={closeMenu}><Link href='/galleria' scroll={true}>Galleria</Link></li>
           <li onClick={closeMenu}><Link href='/orario'>Orario</Link></li>
           <li onClick={closeMenu}><Link className='btn-1s' href='/prenota'>Prenota</Link></li>
         </ul>
