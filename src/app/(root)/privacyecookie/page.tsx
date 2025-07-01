@@ -16,12 +16,9 @@ export default function page() {
 
       <h4 className="mt-xl">2. Tipologie di dati raccolti</h4>
       <p className="mt-xxs">
-        Il sito non raccoglie dati personali direttamente, ad eccezione dei seguenti casi:
+        Il sito non raccoglie dati personali direttamente, ad eccezione del seguente caso:
       </p>
       <ul className="mt-xxs">
-        <li>
-          Dati forniti volontariamente dall’utente tramite moduli di contatto o prenotazione (es. nome, email, numero di telefono).
-        </li>
         <li>
           Dati di navigazione raccolti in forma anonima tramite strumenti di analisi come Vercel Analytics.
         </li>
