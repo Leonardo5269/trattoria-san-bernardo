@@ -7,7 +7,7 @@ export default function page() {
   return (
     <section className={`s-px ${styles.prenota}`}>
         <div className={`${styles["text-content"]}`}>
-          <h1>Vieni a Trovarci</h1>
+          <h1>Vieni a trovarci</h1>
           <p className="medium mt-xl">
            {`La Trattoria San Bernardo si affaccia direttamente sul piazzale dell'Abbazia di Morimondo, in una posizione unica e suggestiva con vista sul prato e sull’Abbazia.`}
           </p>
