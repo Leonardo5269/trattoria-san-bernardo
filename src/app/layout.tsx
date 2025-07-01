@@ -15,9 +15,26 @@ const playFair = Playfair({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://trattoria-san-bernardo.vercel.app"),   // Cambio
   title: "Trattoria San Bernardo",
   description: "Mangia Bene e Rilassati",
-  icons: '/favicon.png',
+  icons: '/logo-assets/favicon.png',
+  openGraph: {
+    title: "Trattoria San Bernardo",
+    description: "Mangia Bene e Rilassati",
+    url: "https://trattoria-san-bernardo.vercel.app/",    // Cambio
+    siteName: "Trattoria San Bernardo",
+    images: [
+      {
+        url: "/logo-assets/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Trattoria San Bernardo",
+      },
+    ],
+    locale: "it_IT",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

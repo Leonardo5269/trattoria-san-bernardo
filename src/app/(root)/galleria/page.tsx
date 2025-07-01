@@ -74,7 +74,7 @@ export default function page() {
       </section>
       <section className={`${styles.chiusura} s-px`}>
         <div className={styles['text-content']}>
-          <h2>Vieni a vivere un’esperienza da ricordare</h2>
+          <h2>Vieni e vivi un’esperienza da ricordare</h2>
           <p className="large mt-xl">Goditi i sapori della cucina</p>
           <a href={`tel:+39${infos.phone}`} className="btn-1li mt-xxl"><IoIosCall />Prenota Ora</a>
         </div>
