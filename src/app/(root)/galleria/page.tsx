@@ -1,6 +1,4 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "./page.module.scss";
 import { infos } from "@/features/infos";
@@ -56,38 +54,13 @@ const images = [
   "/piatti/secondo-4.jpg",
 ];
 
-export default function Page() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  // Chiude il lightbox se clicchi fuori dall'immagine
-  const handleBackdropClick = () => setOpenIndex(null);
-
+export default function page() {
   return (
     <>
-      {/* Sfondo scuro e click per chiudere */}
-      {openIndex !== null && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 1999,
-            background: "rgba(0,0,0,0.6)",
-            backdropFilter: "blur(4px)",
-          }}
-          onClick={handleBackdropClick}
-        />
-      )}
-
       <section className={`s-px ${styles["galleria"]}`}>
         {images.map((src, i) => (
           <FadeIn key={i} delay={0.2}>
-            <div
-              className={`${styles["container"]} ${
-                openIndex === i ? styles["open"] : ""
-              }`}
-              onClick={openIndex === null ? () => setOpenIndex(i) : undefined}
-              style={{ zIndex: openIndex === i ? 2000 : "auto" }}
-            >
+            <div className={styles["container"]}>
               <Image
                 src={src}
                 alt={`Galleria image ${i + 1}`}
@@ -100,18 +73,12 @@ export default function Page() {
         ))}
       </section>
       <section className={`${styles.chiusura} s-px`}>
-        <div className={styles["text-content"]}>
+        <div className={styles['text-content']}>
           <h2>Vieni e vivi un’esperienza da ricordare</h2>
           <p className="large mt-xl">Goditi i sapori della cucina</p>
-          <a
-            href={`tel:+39${infos.phone}`}
-            className="btn-1li mt-xxl"
-          >
-            <IoIosCall />
-            Prenota Ora
-          </a>
+          <a href={`tel:+39${infos.phone}`} className="btn-1li mt-xxl"><IoIosCall />Prenota Ora</a>
         </div>
       </section>
     </>
-  );
+  )
 }
