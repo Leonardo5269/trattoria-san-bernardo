@@ -89,7 +89,7 @@ export default function Footer() {
       </div>
       <hr className={styles.line} />
       <div className={styles.bottom}>
-        <p>@ 2025 - SAN BERNARDO TRATTORIA</p>
+        <p>&copy; 2025 Trattoria San Bernardo – P. IVA 08523780966</p>
         <a href="/privacyecookie" className={styles.privacy}>
           Privacy e Cookie
         </a>

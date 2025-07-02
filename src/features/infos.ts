@@ -28,7 +28,7 @@ const infos: InfosType = {
   timetable: {
     open: {
       days: 'Mercoledì - Domenica',
-      hours: '12 - 22'
+      hours: '12 - 15 / 19 - 22'
     },
     close: {
       days: 'Lunedì e Martedì',
