@@ -56,7 +56,7 @@ const images = [
   "/piatti/secondo-4.jpg",
 ];
 
-export default function page() {
+export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // Chiude il lightbox se clicchi fuori dall'immagine

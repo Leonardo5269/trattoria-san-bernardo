@@ -15,14 +15,14 @@ const playFair = Playfair({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://trattoria-san-bernardo.vercel.app"),   // Cambio
+  metadataBase: new URL("https://www.trattoriasanbernardo.it/"),   
   title: "Trattoria San Bernardo",
   description: "Mangia Bene e Rilassati",
   icons: '/logo-assets/favicon.png',
   openGraph: {
     title: "Trattoria San Bernardo",
     description: "Mangia Bene e Rilassati",
-    url: "https://trattoria-san-bernardo.vercel.app/",    // Cambio
+    url: "https://www.trattoriasanbernardo.it/",    
     siteName: "Trattoria San Bernardo",
     images: [
       {
