@@ -89,7 +89,7 @@ export default function Footer() {
       </div>
       <hr className={styles.line} />
       <div className={styles.bottom}>
-        <p>&copy; 2025 Trattoria San Bernardo – P. IVA 08523780966 - Sito realizzato da <a href="https://www.studiocolore.it" target="_blank" rel="noopener noreferrer">Studio Colore</a></p>
+        <p>&copy; 2025 Trattoria San Bernardo - P. IVA 08523780966 - Sito realizzato da <a href="https://www.studiocolore.it" target="_blank" rel="noopener noreferrer">Studio Colore</a></p>
         <a href="/privacyecookie" className={styles.privacy}>
           Privacy e Cookie
         </a>
