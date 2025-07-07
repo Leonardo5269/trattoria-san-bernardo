@@ -54,7 +54,7 @@ const images = [
   "/piatti/secondo-4.jpg",
 ];
 
-export default function page() {
+export default function Page() {
   return (
     <>
       <section className={`s-px ${styles["galleria"]}`}>
