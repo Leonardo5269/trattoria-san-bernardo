@@ -44,7 +44,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
+      <head>
+        <link rel="canonical" href="https://www.trattoriasanbernardo.it/" />
+      </head>
       <body className={`${montserrat.variable} ${playFair.variable}`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Restaurant",
+              "name": "Trattoria San Bernardo",
+              "image": "https://www.trattoriasanbernardo.it/logo-assets/og-image.jpg",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Via Roma 1",
+                "addressLocality": "Morimondo",
+                "addressRegion": "MI",
+                "postalCode": "20081",
+                "addressCountry": "IT"
+              },
+
+              "telephone": "+39 0123 456789",
+              "url": "https://www.trattoriasanbernardo.it/"
+            })
+          }}
+        />
         {children}
         <Analytics />
       </body>
