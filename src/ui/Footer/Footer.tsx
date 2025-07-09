@@ -51,7 +51,12 @@ export default function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href='/menu.pdf' rel='noopener' target='_blank'>Menù</Link>
+              <Link 
+                href='https://kjobmsyqzvhwxbfnjgkz.supabase.co/storage/v1/object/public/menu//menu.pdf' 
+                rel='noopener noreferrer' 
+                target='_blank'>
+                Menù
+              </Link>
             </li>
             <li>
               <Link href="/galleria" scroll={true}>Galleria</Link>

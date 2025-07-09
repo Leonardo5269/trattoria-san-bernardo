@@ -5,10 +5,12 @@ import styles from './Snapscroll.module.scss';
 import { snapscrollElements } from '@/features/snapscrollElements';
 import Image from 'next/image';
 import SectionCounter from './SectionCounter/SectionCounter';
+import { useRouter } from 'next/dist/client/components/navigation';
 
 export default function Snapscroll() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
     const observer = new window.IntersectionObserver(
@@ -47,7 +49,7 @@ export default function Snapscroll() {
               className={styles.section}
               key={index}
             >
-              <div className={styles['imgs-grid']}>
+              <div className={styles['imgs-grid']} onClick={() => {router.push("/galleria")}}>
                 <div className={styles['img-cell']}>
                   <Image
                     src={el.imgs[0]}
@@ -84,6 +86,7 @@ export default function Snapscroll() {
                     {el.title}
                 </h3>
                 <p className='medium mt-l'>{el.description}</p>
+                <button className="btn-1l mt-xxl" onClick={() => {router.push("/galleria")}}>Vai alla galleria</button>
               </div>
             </div>
         ))}
