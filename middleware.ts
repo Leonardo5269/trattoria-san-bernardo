@@ -4,9 +4,6 @@ import type { NextRequest } from 'next/server';
 
 export async function middleware(req: NextRequest) {
   const res = NextResponse.next();
-  if (!req.nextUrl.pathname.startsWith('/api/menu')) {
-    return res;
-  }
   const supabase = createMiddlewareClient({ req, res });
 
   const {
@@ -16,10 +13,11 @@ export async function middleware(req: NextRequest) {
   if (!user) {
     return NextResponse.redirect(new URL('/login', req.url));
   }
-
   return res;
 }
 
 export const config = {
-  matcher: ['/api/menu/:path*'],
+  matcher: ['/api/menu/:path*', '/dashboard', '/dashboard/:path*'],
 };
+
+
