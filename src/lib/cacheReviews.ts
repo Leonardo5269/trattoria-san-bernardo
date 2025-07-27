@@ -1,5 +1,5 @@
 import redis from './connectCache';
-import { fetchReviews, Review } from './fetchReviews';
+import { fetchReviews, ReviewType } from './fetchReviews';
 
 const SET_NAME: string = 'reviews:trattoriaSanBernardo';
 
@@ -19,7 +19,7 @@ async function addReviews(): Promise<boolean> {
   }
 }
 
-export default async function getReviews(): Promise<Review[] | null> {
+export default async function getReviews(): Promise<ReviewType[] | null> {
   try {
     const cached = await redis.get(SET_NAME);
     if (cached) {

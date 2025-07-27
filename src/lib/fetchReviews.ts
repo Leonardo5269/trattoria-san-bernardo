@@ -21,7 +21,7 @@ interface AuthorAttribution {
   photoUri: string;
 }
 
-export type Review = {
+export type ReviewType = {
   name: string
   photoUri?: string
   rating: number
@@ -29,7 +29,7 @@ export type Review = {
   date: Date
 }
 
-export async function fetchReviews(): Promise<Review[] | null> {
+export async function fetchReviews(): Promise<ReviewType[] | null> {
   try {
     const response = await fetch(
     `https://places.googleapis.com/v1/places/${process.env.PLACE_ID}?languageCode=it`,
@@ -52,7 +52,7 @@ export async function fetchReviews(): Promise<Review[] | null> {
     if (!data.reviews || data.reviews.length === 0) {
       throw new Error('empty reviews field')
     }
-    const reviews: Review[] = (data.reviews).map(obj => ({
+    const reviews: ReviewType[] = (data.reviews).map(obj => ({
       name: obj.authorAttribution.displayName,
       photoUri: obj.authorAttribution.photoUri,
       rating: obj.rating,
