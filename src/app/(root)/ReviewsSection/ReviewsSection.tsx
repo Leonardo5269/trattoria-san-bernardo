@@ -66,10 +66,7 @@ export default async function ReviewsSection() {
         <div className={styles['content']}>
           <div className={styles.text}>
             <h3>Cosa dicono di noi</h3>
-            <p className="medium mt-regular">
-              <FaStar className={styles.icon} /> {avgRating || 'N/A'} / 5 da 60 recensioni su{' '}
-              <a href={socials.googleMaps} className="simple-link-2">Google Maps</a>
-            </p>
+            <p className="medium mt-regular"><FaStar className={styles.icon} /> {avgRating || 'N/A'} / 5 su oltre 900 recensioni tra <a href={socials.facebook} className="simple-link-2">Facebook</a> e <a href={socials.googleMaps} className="simple-link-2">Google Maps</a></p>
           </div>
           <div className={styles.logos}>
             <a href="https://www.tripadvisor.it/LocationPhotoDirectLink-g1079927-d2372529-i181379313-Trattoria_San_Bernardo-Morimondo_Province_of_Milan_Lombardy.html" target='_blank'><Image src='/trip-advisor-logo.png' alt='trip-advisor' width={134} height={56} /></a>
