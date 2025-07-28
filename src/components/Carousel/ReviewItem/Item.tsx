@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Items.module.scss';
-import { ReviewType } from '@/lib/fetchReviews';
+import { ReviewType } from '@/utils/fetchReviews';
 import { FaRegStar, FaStar } from 'react-icons/fa';
 import Image from 'next/image';
 

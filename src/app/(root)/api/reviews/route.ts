@@ -1,4 +1,4 @@
-import getReviews from "@/lib/cacheReviews";
+import getReviews from "@/utils/cacheReviews";
 import { NextResponse } from "next/server";
 
 export async function GET(): Promise<NextResponse> {

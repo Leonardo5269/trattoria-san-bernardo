@@ -38,7 +38,7 @@ import Image from 'next/image';
 import Carousel from '@/components/Carousel/Carousel';
 import ReviewItem from '@/components/Carousel/ReviewItem/Item';
 import FadeIn from '@/components/Animation/FadeIn';
-import { ReviewType } from '@/lib/fetchReviews';
+import { ReviewType } from '@/utils/fetchReviews';
 
 export default async function ReviewsSection() {
   let dynamicReviews: ReviewType[] = [];

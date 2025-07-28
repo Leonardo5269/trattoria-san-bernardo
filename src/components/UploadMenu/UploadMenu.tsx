@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import styles from "@/components/UploadMenu/UploadMenu.module.scss"
 
 export function UploadMenu() {
   const [file, setFile] = useState<File | null>(null);
