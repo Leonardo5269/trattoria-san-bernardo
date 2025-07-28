@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Items.module.scss';
 import { ReviewType } from '@/lib/fetchReviews';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import Image from 'next/image';
 
 const MAX_CHAR = 160;
 
@@ -12,7 +13,7 @@ export default function Item({ item }: { item: ReviewType }) {
   return (
     <div className={styles.item}>
       <div className={styles.profile}>
-        <img width={56} height={56} alt='profile-picture' src={item.photoUri ? item.photoUri : '/google-maps-user.jpg'} />
+        <Image width={56} height={56} alt='profile-picture' src={item.photoUri ? item.photoUri : '/google-maps-user.jpg'} />
         <div className={styles.info}>
           <h5>{item.name}</h5>
           <div className={styles.stars}>

@@ -86,7 +86,6 @@ export default function Snapscroll() {
                     {el.title}
                 </h3>
                 <p className='medium mt-l'>{el.description}</p>
-                <button className="btn-1l mt-xxl" onClick={() => {router.push("/galleria")}}>Vai alla galleria</button>
               </div>
             </div>
         ))}

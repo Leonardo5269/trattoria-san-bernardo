@@ -45,7 +45,7 @@ export default async function ReviewsSection() {
   let avgRating = 0;
 
   try {
-    const response = await fetch('https://trattoriasanbernardo/api/reviews', { next: { revalidate: 86400 } });
+    const response = await fetch('https://www.trattoriasanbernardo.it/api/reviews', { next: { revalidate: 86400 } });
 
     if (!response.ok) {
       throw new Error(`Failed to fetch reviews: ${response.status}`);
