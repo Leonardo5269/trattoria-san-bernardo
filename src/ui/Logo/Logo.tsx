@@ -19,7 +19,7 @@ export default function Logo() {
   return (
     <div className={styles.logo}>
       <Link href='/' scroll={true} onClick={handleClick}>
-        <Image src='/logo-assets/logo.png' alt='logo' height={24} width={181} />
+        <Image src='/logo-assets/logo.png' alt='logo' height={20} width={151} />
       </Link>
     </div>
   );
