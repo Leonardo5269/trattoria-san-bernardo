@@ -3,8 +3,7 @@ import { login } from './loginAction';
 
 export default async function LoginPage() {
   return (
-    <section className={`s-px`}>
-      <h2>Accedi al tuo account</h2>
+    <section>
       <LoginForm login={login} />
     </section>
   );

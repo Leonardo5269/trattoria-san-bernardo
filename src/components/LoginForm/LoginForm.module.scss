@@ -1,0 +1,74 @@
+@use './src/sass/variables' as v;
+@use './src/sass/mixins' as m;
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    form {
+        background-color: v.$bg-2;
+        padding: 48px 32px;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 500px;
+
+        .text-content {
+            text-align: center;
+        }
+
+        .inputs-container {
+            margin-top: v.$xl;
+
+            .input {
+                input {
+                    transition: .2s;
+                    width: 100%;
+                    display: block;
+                    padding: 20px 16px;
+                    border-radius: 12px;
+                    outline: none;
+                    font-size: 16px;
+                    border: 0.5px solid v.$ui-small;
+                    letter-spacing: 0.7px;
+                    background-color: v.$bg-3;
+                    color: v.$title;
+                    &:focus {
+                        border-color: v.$primary;
+                    }
+                    &:hover {
+                        border-color: v.$primary-hover;
+                    }
+                }
+                label {
+                    display: block;
+                    padding-left: 16px;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    color: v.$title;
+                }
+            }
+        }
+        button {
+            width: 100%;
+        }
+        #error {
+            color: v.$primary;
+            line-height: 1;
+            
+            svg {
+                vertical-align: middle;
+                margin-right: 4px;
+            }
+        }
+    }
+
+    @include m.respond-to('mobile') {
+        align-items: start;
+        form {
+            height: 100%;
+            padding-inline: 16px;
+        }
+    }
+}

@@ -14,8 +14,7 @@ export default async function AdminPage() {
   }
 
   return (
-    <section className={`s-px ${styles.admin}`}>
-      <h2>Pannello Admin</h2>
+    <section className={styles.admin}>
       <UploadMenu />
     </section>
   );

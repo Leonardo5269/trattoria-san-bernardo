@@ -1,6 +1,9 @@
 'use client';
 
 import { useState, useTransition } from 'react';
+import styles from './LoginForm.module.scss';
+import { FiAlertCircle } from "react-icons/fi";
+import Loader from '../Loader/Loader';
 
 export default function LoginForm({ login }: { login: (formData: FormData) => Promise<{ error?: string }> }) {
   const [error, setError] = useState<string | null>(null);
@@ -17,11 +20,25 @@ export default function LoginForm({ login }: { login: (formData: FormData) => Pr
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="email" name="email" placeholder="Email" className="mt-l" required />
-      <input type="password" name="password" placeholder="Password" className="mt-s" required />
-      <button type="submit" className="btn-1l mt-xxl" disabled={isPending}>Accedi</button>
-      {error && <p className="text-red-500">{error}</p>}
-    </form>
+    <div className={styles["login-form"]}>
+      <form onSubmit={handleSubmit}>
+        <div className={styles["text-content"]}>
+          <h3>Login</h3>
+          <p className="medium mt-xxs">Accedi al tuo account</p>
+        </div>
+        <div className={styles["inputs-container"]}>
+          <div className={styles["input"]}>
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+          <div className={`${styles["input"]} mt-regular`}>
+            <label htmlFor="password">Password</label>
+            <input id="password" type="password" name="password" required />
+          </div>
+        </div>
+        {error && <p id={styles["error"]} className="mt-xxs"><FiAlertCircle />{error}</p>}
+        <button type="submit" className="btn-1l mt-xxl" disabled={isPending}>{isPending ? <Loader /> : 'Accedi'}</button>
+      </form>
+    </div>
   );
 }

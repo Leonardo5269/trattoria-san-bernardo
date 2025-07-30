@@ -4,8 +4,10 @@
 .admin {
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  padding-block: v.$xxxl;
+  height: 100vh;
+  @include m.respond-to('mobile') {
+    height: auto;
+  }
 }
