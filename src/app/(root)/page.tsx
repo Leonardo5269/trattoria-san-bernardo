@@ -14,7 +14,7 @@ export default function page() {
         <p className="large mt-regular">Dimentica il solito pranzo: qui ogni piatto è un viaggio tra gusto, tradizione e pura emozione</p>
         <div className="mt-xxl">
           <Link href='/prenota' className='btn-1l'>Prenota ora</Link>
-          <Link href='/menu.pdf' className='btn-2l ml-xxl' rel='noopener' target='_blank'>Menù</Link>
+          <Link href='https://kjobmsyqzvhwxbfnjgkz.supabase.co/storage/v1/object/public/menu//menu.pdf' className='btn-2l ml-xxl' rel='noopener' target='_blank'>Menù</Link>
         </div>
       </Hero>
       <FadeIn delay={0.4}>
