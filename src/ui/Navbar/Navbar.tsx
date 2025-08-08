@@ -6,6 +6,7 @@ import './Navbar.scss';
 import Link from 'next/link';
 import { MdClose, MdMenu } from 'react-icons/md';
 import useMediaQuery from '@/hooks/useMediaQuery';
+import { menuLink } from '@/features/infos';
 
 const TABLET_SCREEN = 1080;
 
@@ -50,7 +51,7 @@ export default function Navbar() {
         }
         <ul className={`link-pages ${isMenuOpened ? 'show' : 'hide'}`}>
           <li onClick={closeMenu}><Link href='/'>Home</Link></li>
-          <li onClick={closeMenu}><Link href='https://kjobmsyqzvhwxbfnjgkz.supabase.co/storage/v1/object/public/menu//menu.pdf' rel='noopener noreferrer' target='_blank'>Menù</Link></li>
+          <li onClick={closeMenu}><Link href={menuLink}rel='noopener noreferrer' target='_blank'>Menù</Link></li>
           <li onClick={closeMenu}><Link href='/galleria' scroll={true}>Galleria</Link></li>
           <li onClick={closeMenu}><Link href='/orario'>Orario</Link></li>
           <li onClick={closeMenu}><Link className='btn-1s' href='/prenota'>Prenota</Link></li>

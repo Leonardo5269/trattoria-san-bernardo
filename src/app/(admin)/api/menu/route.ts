@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
 
   try {
     const { error: uploadError } = await supabase.storage
-      .from('menu')
+      .from('menu-trattoria-san-bernardo')
       .upload('menu.pdf', file, { upsert: true });
     
     if (uploadError) {

@@ -3,7 +3,7 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { infos, socials } from "@/features/infos";
+import { infos, menuLink, socials } from "@/features/infos";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { IoLocationSharp } from "react-icons/io5";
@@ -52,7 +52,7 @@ export default function Footer() {
             </li>
             <li>
               <Link 
-                href='https://kjobmsyqzvhwxbfnjgkz.supabase.co/storage/v1/object/public/menu//menu.pdf' 
+                href={menuLink}
                 rel='noopener noreferrer' 
                 target='_blank'>
                 Menù

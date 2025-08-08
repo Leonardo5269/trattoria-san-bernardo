@@ -42,4 +42,6 @@ const socials: SocialsType = {
   googleMaps: 'https://maps.app.goo.gl/739YTWacVtBLhD6d9'
 }
 
-export { infos, socials };
+const menuLink = "https://kekkdcrmyzqmmtxnisoo.supabase.co/storage/v1/object/public/menu-trattoria-san-bernardo/menu.pdf";
+
+export { infos, socials, menuLink };
