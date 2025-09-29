@@ -18,7 +18,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.trattoriasanbernardo.it/"),   
   title: "Trattoria San Bernardo",
   description: "Mangia Bene e Rilassati",
-  icons: '/logo-assets/favicon.png',
+  icons: {
+    icon: '/logo-assets/favicon.png',
+    shortcut: '/logo-assets/favicon.png',
+    apple: '/logo-assets/mobile/SB_180x180.png'
+  },
   openGraph: {
     title: "Trattoria San Bernardo",
     description: "Mangia Bene e Rilassati",
@@ -46,6 +50,7 @@ export default function RootLayout({
     <html lang="it">
       <head>
         <link rel="canonical" href="https://www.trattoriasanbernardo.it/" />
+        <link rel="stylesheet" href="/logo-assets/mobile/SB_180x180.png" />
       </head>
       <body className={`${montserrat.variable} ${playFair.variable}`}>
         <script
