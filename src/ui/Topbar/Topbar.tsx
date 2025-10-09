@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Topbar.module.scss';
 import Circle from '@/components/Button/Circle/Circle';
-import { IoCallOutline, IoLocationOutline } from 'react-icons/io5';
+import { IoCallOutline, IoLocationOutline, IoMailOutline } from 'react-icons/io5';
 import { LuClock } from "react-icons/lu";
 import { infos, socials } from '@/features/infos';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
@@ -13,6 +13,10 @@ export default function Topbar() {
         <li>
           <Circle Icon={IoCallOutline} href={`tel:${infos.phone}`} classname={styles.circle} />
           <a className={`${styles.text} simple-link`} href={`tel:${infos.phone}`} target='_blank'>{infos.phone}</a> 
+        </li>
+        <li className={styles['not-mobile']}>
+          <Circle Icon={IoMailOutline} href={`mailto:${infos.email}`} classname={styles.circle} />
+          <a className={`${styles.text} simple-link`} href={`mailto:${infos.email}`} target='_blank'>{infos.email}</a> 
         </li>
         <li className={styles['not-mobile']}>
           <Circle Icon={IoLocationOutline} href={infos.site.url} classname={styles.circle} />

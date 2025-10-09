@@ -7,7 +7,7 @@ import { infos, menuLink, socials } from "@/features/infos";
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { IoLocationSharp } from "react-icons/io5";
-import { IoIosCall } from "react-icons/io";
+import { IoIosCall, IoIosMail } from "react-icons/io";
 import Circle from "@/components/Button/Circle/Circle";
 
 export default function Footer() {
@@ -82,6 +82,10 @@ export default function Footer() {
               >
                 {infos.site.text}
               </a>
+            </li>
+            <li>
+              <span className={styles.icon}><IoIosMail /></span>
+              <a href={`mailto:${infos.email}`}>{infos.email}</a>
             </li>
             <li>
               <span className={styles.icon}><IoIosCall /></span>

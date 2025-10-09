@@ -4,6 +4,7 @@ interface TimetableType {
 }
 interface InfosType {
   phone: string;
+  email: string;
   site: {
     url: string;
     text: string;
@@ -21,6 +22,7 @@ interface SocialsType {
 
 const infos: InfosType = {
   phone: '02 4965 0597',
+  email: 'davidpeix_2@me.com',
   site: {
     text: 'Via Roma 1, Morimondo (MI)',
     url: 'https://maps.app.goo.gl/YhTNFzBWgMUWe7VP6'
