@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <main className={`s-mx ${styles.main}`}>
       <div className={styles['content']}>
-        <h1>Organizza il tuo evento da noi</h1>
+        <h1>Organizza i tuoi meeting ed eventi da noi</h1>
         <p className='mt-regular large'>La nostra location a disposizione per ambientare i vostri eventi e incontri di lavoro in una dimensione diversa dall’ordinario</p>
         <div className={`mt-xxl ${styles['buttons']}`}>
            <a href={`tel:${infos.phone}`} className='btn-1i'>
