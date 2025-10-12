@@ -53,7 +53,7 @@ export default function Navbar() {
           <li onClick={closeMenu}><Link href='/'>Home</Link></li>
           <li onClick={closeMenu}><Link href={menuLink}rel='noopener noreferrer' target='_blank'>Menù</Link></li>
           <li onClick={closeMenu}><Link href='/galleria' scroll={true}>Galleria</Link></li>
-          <li onClick={closeMenu}><Link href='/orario'>Orario</Link></li>
+          <li onClick={closeMenu}><Link href='/eventi'>Eventi</Link></li>
           <li onClick={closeMenu}><Link className='btn-1s' href='/prenota'>Prenota</Link></li>
         </ul>
       </div>

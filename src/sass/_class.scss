@@ -48,6 +48,27 @@ a.btn-1s {
         background-color: v.$primary-hover;
     }
 }
+button.btn-1i,
+a.btn-1i {
+    transition: .2s;
+    display: inline-block;
+    font: v.$regular var(--font-montserrat), sans-serif;
+    padding: 1rem 1.5rem 1rem 1.25rem;
+    border-radius: v.$xs;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: v.$primary;
+    svg {
+        margin-right: v.$xxs;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+    &:hover {
+        background-color: v.$primary-hover;
+    }
+}
 button.btn-1l,
 a.btn-1l {
     transition: .2s;
@@ -85,6 +106,29 @@ a.btn-1li {
     }
     &:hover {
         background-color: v.$primary-hover;
+    }
+}
+button.btn-2i,
+a.btn-2i {
+    $border-width: 2px;
+    transition: .2s;
+    display: inline-block;
+    font: v.$regular var(--font-montserrat), sans-serif;
+    padding: calc(1rem - #{$border-width}) calc(1.5rem - #{$border-width}) calc(1rem - #{$border-width}) calc(1.25rem - #{$border-width});
+    border-radius: v.$xs;
+    border: $border-width solid v.$primary;
+    cursor: pointer;
+    color: v.$primary;
+    font-weight: 600;
+    background-color: transparent;
+    svg {
+        margin-right: v.$xxs;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+    &:hover {
+        color: v.$primary-hover;
+        border-color: v.$primary-hover;
     }
 }
 button.btn-2l,

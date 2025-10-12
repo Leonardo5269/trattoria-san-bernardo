@@ -16,7 +16,7 @@ export default function page() {
             className="btn-1li mt-xxl"
           >
             <IoIosCall style={{ fontSize: "1.5rem", verticalAlign: "middle", marginRight: "8px"}} />
-            Chiama Ora
+            Chiama ora
           </a>
         </div>
         <div className={`${styles["image-content"]}`}>

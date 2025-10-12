@@ -1,0 +1,22 @@
+@use '@/sass/variables' as v;
+@use '@/sass/mixins' as m;
+
+.main {
+    padding: v.$xxxl 0;
+    .content {
+        margin-inline: auto;
+        text-align: center;
+        max-width: 870px;
+        .buttons {
+            justify-content: center;
+            display: flex;
+            gap: v.$xl;
+        }
+    }
+    .image {
+        display: block;
+        margin-inline: auto;
+        width: min(100%, 1080px);
+        border-radius: 8px;
+    }
+}

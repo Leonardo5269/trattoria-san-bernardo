@@ -62,7 +62,7 @@ export default function Footer() {
               <Link href="/galleria" scroll={true}>Galleria</Link>
             </li>
             <li>
-              <Link href="/orario">Orario</Link>
+              <Link href="/orario">Eventi</Link>
             </li>
             <li>
               <Link href="/prenota">Contatti</Link>
