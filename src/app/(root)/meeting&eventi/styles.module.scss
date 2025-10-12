@@ -16,7 +16,9 @@
     .image {
         display: block;
         margin-inline: auto;
+        aspect-ratio: 21 / 9;
         width: min(100%, 1080px);
+        height: auto;
         border-radius: 8px;
     }
 }
