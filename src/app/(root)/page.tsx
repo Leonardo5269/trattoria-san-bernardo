@@ -6,7 +6,6 @@ import ReviewsSection from './ReviewsSection/ReviewsSection';
 import Chiusura from '@/ui/Chiusura/Chiusura';
 import FadeIn from '@/components/Animation/FadeIn';
 import { menuLink } from '@/features/infos';
-import ChristmasButton from '@/components/Button/ChristmasButton/ChristmasButton';
 
 export default function page() {
   return (
@@ -18,7 +17,6 @@ export default function page() {
           <Link href='/prenota' className='btn-1l'>Prenota ora</Link>
           <Link href={menuLink}className='btn-2l ml-xxl' rel='noopener' target='_blank'>Menù</Link>
         </div>
-        <ChristmasButton classname='mt-xl' />
       </Hero>
       <FadeIn delay={0.4}>
         <Snapscroll />
