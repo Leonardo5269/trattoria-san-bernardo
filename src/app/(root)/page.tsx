@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Hero from '@/ui/Hero/Hero';
 import Link from 'next/link';
 import React from 'react';
