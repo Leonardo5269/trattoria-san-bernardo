@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Playfair } from "next/font/google";
 import "@/sass/_global.scss";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -48,11 +49,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <head>
-        <link rel="canonical" href="https://www.trattoriasanbernardo.it/" />
-        <link rel="stylesheet" href="/logo-assets/mobile/SB_180x180.png" />
-      </head>
       <body className={`${montserrat.variable} ${playFair.variable}`}>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-GZMQ5KQJVV"
+        strategy="beforeInteractive"
+      />
+      <Script id="ga" strategy="beforeInteractive">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GZMQ5KQJVV');
+      `}
+      </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
