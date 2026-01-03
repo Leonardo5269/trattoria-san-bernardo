@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Peix;David;;;
+FN:David Peix
+ORG:Trattoria San Bernardo
+TITLE:Titolare
+TEL;TYPE=CELL,WORK,PREF=1:+393287855829
+TEL;TYPE=WORK,VOICE:+390249650597
+EMAIL;TYPE=WORK:davidpeix14@gmail.com
+URL:https://www.trattoriasanbernardo.it/
+ADR;TYPE=WORK:;;Via Roma\, 1;Morimondo;MI;20081;Italia
+KIND:individual
+UID:trattoria-san-bernardo-david-peix
+REV:20260103T000000Z
+END:VCARD
