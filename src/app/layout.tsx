@@ -59,7 +59,7 @@ export default function RootLayout({
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-GZMQ5KQJVV');
+        gtag('config', 'G-GZMQ5KQJVV', { anonymize_ip: true });
       `}
       </Script>
         <script
