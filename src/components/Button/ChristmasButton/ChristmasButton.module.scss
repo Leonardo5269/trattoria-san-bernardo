@@ -1,20 +1,25 @@
-@use '@/sass/variables' as v;
+@use "@/sass/variables" as v;
 
 .button {
-    background: linear-gradient(94.05deg, #6E2323 0%, #CE2222 100%);
-    border-radius: 12px;
+  background: linear-gradient(
+    -30deg,
+    hsl(310, 52%, 28%) 0%,
+    hsl(310, 72%, 47%) 100%
+  );
+  border-radius: 12px;
 
-    transition: .2s;
-    display: inline-block;
-    font: v.$regular var(--font-montserrat), sans-serif;
-    padding: 1.125em 2em;
-    border-radius: v.$xs;
-    border: none;
-    cursor: pointer;
-    color: #ffffff;
-    font-weight: 600;
-    &:hover {
-        transform: translateY(-4px);
-    }
-
+  transition: 0.2s;
+  display: inline-block;
+  font:
+    v.$regular var(--font-montserrat),
+    sans-serif;
+  padding: 1.125em 2em;
+  border-radius: v.$xs;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+  &:hover {
+    transform: translateY(-4px);
+  }
 }

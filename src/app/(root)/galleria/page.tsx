@@ -61,7 +61,7 @@ export default function Page() {
         {images.map((src, i) => (
           <FadeIn key={i} delay={0.2}>
             <div className={styles["container"]}>
-              <Image
+              <img
                 src={src}
                 alt={`Galleria image ${i + 1}`}
                 width={600}
@@ -73,12 +73,15 @@ export default function Page() {
         ))}
       </section>
       <section className={`${styles.chiusura} s-px`}>
-        <div className={styles['text-content']}>
+        <div className={styles["text-content"]}>
           <h2>Vieni e vivi un’esperienza da ricordare</h2>
           <p className="large mt-xl">Goditi i sapori della cucina</p>
-          <a href={`tel:+39${infos.phone}`} className="btn-1li mt-xxl"><IoIosCall />Prenota Ora</a>
+          <a href={`tel:+39${infos.phone}`} className="btn-1li mt-xxl">
+            <IoIosCall />
+            Prenota Ora
+          </a>
         </div>
       </section>
     </>
-  )
+  );
 }
