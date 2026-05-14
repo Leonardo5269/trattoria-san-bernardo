@@ -32,7 +32,7 @@ export default function page() {
             Menù
           </Link>
         </div>
-        <ChristmasButton classname="mt-xl" />
+        {/* <ChristmasButton classname="mt-xl" /> */ }
       </Hero>
       <FadeIn delay={0.4}>
         <Snapscroll />
