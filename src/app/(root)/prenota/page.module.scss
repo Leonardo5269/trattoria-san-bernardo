@@ -1,5 +1,5 @@
-@use '@/sass/variables' as v;
-@use '@/sass/mixins' as m;
+@use "@/sass/variables" as v;
+@use "@/sass/mixins" as m;
 
 .prenota {
   display: flex;
@@ -11,6 +11,9 @@
   .text-content {
     width: 50%;
     max-width: 600px;
+    :global(a.btn-2l) {
+      color: v.$title;
+    }
   }
 
   .image-content {
@@ -25,7 +28,7 @@
     }
   }
 
-  @include m.respond-to('tablet') {
+  @include m.respond-to("tablet") {
     flex-direction: column;
     align-items: center;
 
