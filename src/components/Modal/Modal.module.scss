@@ -1,0 +1,52 @@
+@use '@/sass/variables' as v;
+@use '@/sass/mixins' as m;
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  border: none;
+  outline: none;
+  background: transparent;
+  overflow: hidden;
+  pointer-events: none;
+  img {
+    height: 90dvh;
+    @include m.respond-to('600px') {
+        width: 90vw;
+        height: auto;
+    }
+  }
+  .close {
+    pointer-events: all;
+    cursor: pointer;
+    position: absolute;
+    right: .4rem;
+    top: .4rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: rgba(39, 39, 39, 0.6);
+    color: rgb(227, 227, 227);
+    border-radius: 4px;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    padding: 2px;
+    transition: .2s;
+    svg {
+        vertical-align: middle;
+    }
+    &:hover {
+        background-color: rgba(39, 39, 39, 0.4);
+    }
+  }
+
+  &.dark-background {
+    &::backdrop {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}

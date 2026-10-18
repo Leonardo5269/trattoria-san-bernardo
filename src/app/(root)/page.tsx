@@ -9,10 +9,12 @@ import Chiusura from "@/ui/Chiusura/Chiusura";
 import FadeIn from "@/components/Animation/FadeIn";
 import { menuLink } from "@/features/infos";
 import ChristmasButton from "@/components/Button/ChristmasButton/ChristmasButton";
+import PopupSection from "./PopupSection";
 
 export default function page() {
   return (
     <>
+      <PopupSection />
       <Hero>
         <h1 className="dark">Mangia Bene e Rilassati</h1>
         <p className="large mt-regular">
@@ -32,7 +34,7 @@ export default function page() {
             Menù
           </Link>
         </div>
-        {/* <ChristmasButton classname="mt-xl" /> */ }
+        {/* <ChristmasButton classname="mt-xl" /> */}
       </Hero>
       <FadeIn delay={0.4}>
         <Snapscroll />
