@@ -51,10 +51,7 @@ export default function Footer() {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link 
-                href={menuLink}
-                rel='noopener noreferrer' 
-                target='_blank'>
+              <Link href={menuLink}>
                 Menù
               </Link>
             </li>

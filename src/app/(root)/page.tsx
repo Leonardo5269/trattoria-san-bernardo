@@ -25,12 +25,7 @@ export default function page() {
           <Link href="/prenota" className="btn-1l">
             Prenota ora
           </Link>
-          <Link
-            href={menuLink}
-            className="btn-2l ml-xxl"
-            rel="noopener"
-            target="_blank"
-          >
+          <Link href={menuLink} className="btn-2l ml-xxl">
             Menù
           </Link>
         </div>

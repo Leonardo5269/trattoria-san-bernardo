@@ -44,6 +44,6 @@ const socials: SocialsType = {
   googleMaps: 'https://maps.app.goo.gl/739YTWacVtBLhD6d9'
 }
 
-const menuLink = '/menu.pdf';
+const menuLink = '/menu';
 
 export { infos, socials, menuLink };
