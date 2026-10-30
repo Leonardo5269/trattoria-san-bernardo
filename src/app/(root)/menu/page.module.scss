@@ -50,6 +50,14 @@
   }
 }
 
+// Nota sotto la card (es. disponibilità limitata)
+.note {
+  margin-top: v.$xxs;
+  text-align: center;
+  font-size: v.$s;
+  color: v.$title-2;
+}
+
 .card {
   display: block;
   width: 100%;

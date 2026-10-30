@@ -8,7 +8,7 @@ import MenuFestiviGrid from './MenuFestiviGrid';
 export const metadata: Metadata = {
   title: 'Menù | Trattoria San Bernardo',
   description:
-    'Scopri il menù alla carta della Trattoria San Bernardo e i nostri menù delle feste di Natale: Auguri, Stella, Fiocco e Ghirlanda.',
+    'Scopri il menù alla carta della Trattoria San Bernardo e i nostri menù delle feste di Natale: Auguri, Stella, Fiocco, Ghirlanda e Gran Menù di Natale.',
 };
 
 export default function Page() {
@@ -47,8 +47,9 @@ export default function Page() {
           <div className={styles.sectionHead}>
             <h2>Menù di Natale</h2>
             <p className="mt-regular large">
-              Quattro proposte pensate per le feste. Tocca un menù per leggerlo
-              per intero.
+              Cinque proposte pensate per le feste. Tocca un menù per leggerlo
+              per intero. Il Gran Menù di Natale è disponibile solo il 25
+              dicembre a pranzo.
             </p>
           </div>
           <MenuFestiviGrid />

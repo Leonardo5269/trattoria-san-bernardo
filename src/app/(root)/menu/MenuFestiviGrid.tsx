@@ -9,14 +9,20 @@ import styles from './page.module.scss';
 type FestiveMenu = {
   src: string;
   alt: string;
+  note?: string;
 };
 
-// Ordine per prezzo crescente: Auguri 45€, Stella 60€, Fiocco 65€, Ghirlanda 65€
+// Ordine per prezzo crescente: Auguri 45€, Stella 60€, Fiocco 65€, Ghirlanda 65€, Gran Menù 90€
 const festiveMenus: FestiveMenu[] = [
   { src: '/menu-festivo/menu-auguri.jpeg', alt: 'Menù Auguri – 45€' },
   { src: '/menu-festivo/menu-stella.jpeg', alt: 'Menù Stella – 60€' },
   { src: '/menu-festivo/menu-fiocco.jpeg', alt: 'Menù Fiocco – 65€' },
   { src: '/menu-festivo/menu-ghirlanda.jpeg', alt: 'Menù Ghirlanda – 65€' },
+  {
+    src: '/menu-festivo/menu-natalizio.jpeg',
+    alt: 'Gran Menù di Natale – 90€',
+    note: 'Solo per il 25 dicembre a pranzo',
+  },
 ];
 
 export default function MenuFestiviGrid() {
@@ -48,6 +54,7 @@ export default function MenuFestiviGrid() {
                 sizes="(max-width: 521px) 100vw, (max-width: 1080px) 50vw, 45vw"
               />
             </button>
+            {menu.note && <p className={styles.note}>{menu.note}</p>}
           </FadeIn>
         ))}
       </div>
