@@ -6,18 +6,14 @@ import Modal from '@/components/Modal/Modal';
 import FadeIn from '@/components/Animation/FadeIn';
 import styles from './page.module.scss';
 
-type FestiveMenu = {
+export type FestiveMenu = {
   src: string;
   alt: string;
   note?: string;
 };
 
-// Ordine per prezzo crescente: Auguri 45€, Stella 60€, Fiocco 65€, Ghirlanda 65€, Gran Menù 90€
-const festiveMenus: FestiveMenu[] = [
-  { src: '/menu-festivo/menu-auguri.jpeg', alt: 'Menù Auguri – 45€' },
-  { src: '/menu-festivo/menu-stella.jpeg', alt: 'Menù Stella – 60€' },
-  { src: '/menu-festivo/menu-fiocco.jpeg', alt: 'Menù Fiocco – 65€' },
-  { src: '/menu-festivo/menu-ghirlanda.jpeg', alt: 'Menù Ghirlanda – 65€' },
+// Menù di Natale a pranzo del 25 dicembre
+export const menuPranzoNatale: FestiveMenu[] = [
   {
     src: '/menu-festivo/menu-natalizio.jpeg',
     alt: 'Gran Menù di Natale – 90€',
@@ -25,7 +21,20 @@ const festiveMenus: FestiveMenu[] = [
   },
 ];
 
-export default function MenuFestiviGrid() {
+// Proposte per cene aziendali, in famiglia o tra amici, ordine per prezzo crescente
+export const menuCeneNatalizie: FestiveMenu[] = [
+  { src: '/menu-festivo/menu-auguri.jpeg', alt: 'Menù Auguri – 45€' },
+  { src: '/menu-festivo/menu-stella.jpeg', alt: 'Menù Stella – 60€' },
+  { src: '/menu-festivo/menu-fiocco.jpeg', alt: 'Menù Fiocco – 65€' },
+  { src: '/menu-festivo/menu-ghirlanda.jpeg', alt: 'Menù Ghirlanda – 65€' },
+];
+
+type Props = {
+  menus: FestiveMenu[];
+  single?: boolean;
+};
+
+export default function MenuFestiviGrid({ menus, single = false }: Props) {
   const modalRef = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState<FestiveMenu | null>(null);
 
@@ -36,8 +45,8 @@ export default function MenuFestiviGrid() {
 
   return (
     <>
-      <div className={styles.grid}>
-        {festiveMenus.map((menu, i) => (
+      <div className={`${styles.grid} ${single ? styles.gridSingle : ''}`}>
+        {menus.map((menu, i) => (
           <FadeIn key={menu.src} delay={0.15 + i * 0.1}>
             <button
               type="button"

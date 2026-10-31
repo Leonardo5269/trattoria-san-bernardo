@@ -50,6 +50,13 @@
   }
 }
 
+// Singola card centrata (es. Gran Menù di Natale)
+.gridSingle {
+  grid-template-columns: 1fr;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
 // Nota sotto la card (es. disponibilità limitata)
 .note {
   margin-top: v.$xxs;

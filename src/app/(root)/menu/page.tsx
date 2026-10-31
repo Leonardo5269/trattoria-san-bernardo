@@ -3,12 +3,12 @@ import type { Metadata } from 'next';
 import styles from './page.module.scss';
 import { infos } from '@/features/infos';
 import { IoIosCall } from 'react-icons/io';
-import MenuFestiviGrid from './MenuFestiviGrid';
+import MenuFestiviGrid, { menuCeneNatalizie, menuPranzoNatale } from './MenuFestiviGrid';
 
 export const metadata: Metadata = {
   title: 'Menù | Trattoria San Bernardo',
   description:
-    'Scopri il menù alla carta della Trattoria San Bernardo e i nostri menù delle feste di Natale: Auguri, Stella, Fiocco, Ghirlanda e Gran Menù di Natale.',
+    'Scopri il menù alla carta della Trattoria San Bernardo, il Menù di Natale del 25 dicembre a pranzo e le nostre proposte per cene aziendali, in famiglia o tra amici: Auguri, Stella, Fiocco e Ghirlanda.',
 };
 
 export default function Page() {
@@ -42,17 +42,28 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Menù delle feste */}
+        {/* Menù di Natale 25 dicembre a pranzo */}
         <section className={styles.section}>
           <div className={styles.sectionHead}>
             <h2>Menù di Natale</h2>
             <p className="mt-regular large">
-              Cinque proposte pensate per le feste. Tocca un menù per leggerlo
-              per intero. Il Gran Menù di Natale è disponibile solo il 25
-              dicembre a pranzo.
+              Il nostro menù speciale per il pranzo di Natale, disponibile solo
+              il 25 dicembre. Tocca il menù per leggerlo per intero.
             </p>
           </div>
-          <MenuFestiviGrid />
+          <MenuFestiviGrid menus={menuPranzoNatale} single />
+        </section>
+
+        {/* Cene natalizie: aziendali, famiglia e amici */}
+        <section className={styles.section}>
+          <div className={styles.sectionHead}>
+            <h2>Cene di Natale</h2>
+            <p className="mt-regular large">
+              Proposte per cene aziendali, in famiglia o tra amici nel periodo
+              natalizio. Tocca un menù per leggerlo per intero.
+            </p>
+          </div>
+          <MenuFestiviGrid menus={menuCeneNatalizie} />
         </section>
       </main>
 
